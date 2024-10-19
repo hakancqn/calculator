@@ -1,0 +1,91 @@
+@font-face {
+    font-family:'digital-clock-font1';
+    src: url('font/digital-7.regular.ttf');
+}
+@font-face {
+    font-family:'digital-clock-font2';
+    src: url('font/digital-dismay.regular.otf');
+}
+@font-face {
+    font-family:'digital-clock-font3';
+    src: url('font/DS-DIGI.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #4c566a;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background: #2e3440;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+.screen {
+    background: #d8dee9;
+    width: minmax(100px, 100%);
+    height: 10%;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.sum {
+    background: #c3c3c300;
+    border: 0;
+    margin: 10px;
+    padding-bottom: 15px;
+    height: 100%;
+    width: 97%;
+    align-items: center;
+    font-family: digital-clock-font1, sans-serif;
+    font-size: 50px;
+    text-align: right;
+}
+
+.btn {
+    cursor: pointer;
+    color: aliceblue;
+    background: #4c566a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.5s;
+    height: auto;
+    width: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px #aaa;
+}
+
+.button-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 20px;
+}
+
+.btn-clear {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.btn-zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

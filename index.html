@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="screen" id="screen">
+        <label for="sum"></label>
+        <input type="text" class="sum" id="sum"/>
+    </div>
+    <div class="button-parent" id="button-parent">
+        <div class="btn btn-top btn-clear" onclick="clearOp()">C</div>
+        <div class="btn btn-top" onclick="deleteLast()">&#x232B;</div>
+        <div class="btn btn-top btn-percent" onclick="operation('%')">%</div>
+        <div class="btn btn-divide" onclick="operation('/')">/</div>
+        <div class="btn btn-left btn-one" onclick="operation('1')">1</div>
+        <div class="btn btn-left btn-two" onclick="operation('2')">2</div>
+        <div class="btn btn-left btn-three" onclick="operation('3')">3</div>
+        <div class="btn btn-multiply" onclick="operation('*')">*</div>
+        <div class="btn btn-left btn-four" onclick="operation('4')">4</div>
+        <div class="btn btn-left btn-five" onclick="operation('5')">5</div>
+        <div class="btn btn-left btn-six" onclick="operation('6')">6</div>
+        <div class="btn btn-subtract" onclick="operation('-')">-</div>
+        <div class="btn btn-left btn-seven" onclick="operation('7')">7</div>
+        <div class="btn btn-left btn-eight" onclick="operation('8')">8</div>
+        <div class="btn btn-left btn-nine" onclick="operation('9')">9</div>
+        <div class="btn btn-add" onclick="operation('+')">+</div>
+        <div class="btn btn-left btn-zero" onclick="operation('0')">0</div>
+        <div class="btn btn-left btn-dot" onclick="operation('.')">.</div>
+        <div class="btn btn-equal" onclick="sumup()">=</div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
