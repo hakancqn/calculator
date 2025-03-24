@@ -1,23 +1,18 @@
 let sum = document.getElementById('sum');
 function operation(input) {
     if (sum.value !== '0') {
-        console.log('value is not 0');
         sum.value += input;
     } else {
-        console.log('value is 0');
         sum.value = input;
     }
     console.log('Sum:', sum.value);
 }
 
 function clearOp() {
-    console.clear();
-    console.log('Summary was cleared.');
     sum.value = 0;
 }
 function deleteLast() {
     sum.value = sum.value.substring(0, sum.value.length - 1);
-    console.log('Sum:', sum.value);
 }
 
 document.addEventListener('keydown', function (e) {
@@ -25,9 +20,7 @@ document.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.keyCode === 13) {
             sumup();
         }
-        console.log('keyCode:', e.keyCode, ', Key:', e.key );
     } else {
-        console.log('keyCode:', e.keyCode, ', Key:', e.key );
         if (e.key === '=') {
             sumup();
         } else if (e.key === 'c') {
@@ -75,11 +68,9 @@ function sumup() {
     // Evaluate the final expression
     try {
         let result = eval(expression);
-        console.log(result);
         sum.value = result;
         return result;
     } catch (error) {
-        console.log('Error in calculation');
         return 'Error';
     }
 }
